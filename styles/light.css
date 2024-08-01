@@ -4,9 +4,142 @@
   переключая тему
 */
 
+:root.theme-light {
+  /* Переменные светлой темы */
+  --accent-color: #ffc2e6;
+  --accent-background-color: #353430;
+  --text-color: #ff8dcb;
+  --accent-border: #32312d;
+  --main-padding: 10px;
+}
+
+/* Остальные стили */
+.theme_light .header::before {
+  --accent-background-color: #353430;
+}
+
+.theme_light .header::after {
+  --accent-background-color: #353430;
+}
+
+.theme_light .decorated-element {
+  display: none;
+}
+
+@media (width < 1024px) {
+  .theme_light .header__theme-menu {
+    padding-block-start: clamp(4.0625rem, -2.3187rem + 27.2265vw, 10.75rem);
+    padding-block-end: clamp(4.0625rem, -2.3783rem + 27.4809vw, 10.8125rem);
+    min-height: clamp(14.25rem, 1.428rem + 54.7074vw, 27.6875rem);
+  }
+}
+
+.theme_light .header__theme-menu-button,
+.theme_light .header__theme-menu-button_active,
+.theme_light .header__theme-menu-button:focus-visible,
+.theme_light .section__title {
+  --accent-background-color: #353430;
+}
+
+.theme_light .header__theme-menu-button:hover {
+  --accent-background-color: #32312d;
+}
+
+.theme_light .header__title {
+  --accent-color: #ffc2e6;
+}
+
+@media (width >= 1024px) {
+  .theme_light .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 299px 244px 205px;
+    max-height: 748px;
+  }
+
+  .theme_light .header__theme-menu {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding-block-end: 273px;
+    justify-content: center;
+  }
+
+  .theme_light .header__theme-menu-list {
+    display: flex;
+    min-width: 230px;
+  }
+
+  .theme_light .header__title {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    max-height: 130px;
+    padding-block-end: 114px;
+  }
+
+  .theme_light .pictures {
+    grid-template-columns: repeat(
+      auto-fill,
+      calc((calc(100vw - calc(var(--main-padding) * 2))) / 3)
+    );
+  }
+
+  .theme_light .footer {
+    min-height: 748px;
+  }
+}
+
+.theme_light .title-decor {
+  --accent-background-color: #ff8dcb;
+}
+
+.theme_light .card__title {
+  --text-color: #353430;
+}
+.theme_light .card__text {
+  --accent-border: #353430;
+}
+
+.theme_light .footer {
+  --accent-color: #ffc2e6;
+}
+
+.theme_light .footer::before {
+  --accent-background-color: #353430;
+}
+
+.theme_light .footer::after {
+  --accent-background-color: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --accent-color: #ffc2e6;
+    --accent-background-color: #353430;
+    --text-color: #ff8dcb;
+    --accent-border: #32312d;
+    --main-padding: 10px;
+  }
+
+  /* .header__theme-menu-button:hover {
+    border: 1px solid var(--accent-border);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--accent-border);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--accent-background-color);
+  } */
+}
+
+/* Остальные стили */
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background: fixed border-box transparent url(../images/cover-image-light.png)
+    no-repeat center / cover;
 }

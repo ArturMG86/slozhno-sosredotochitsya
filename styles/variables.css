@@ -2,3 +2,11 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  /* Переменные тёмной темы */
+  --accent-color: #db00ff;
+  --accent-background-color: #ff0070;
+  --text-color: #000028;
+  --accent-border: #f1b2ce;
+  --main-padding: 10px;
+}

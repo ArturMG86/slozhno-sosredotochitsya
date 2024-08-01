@@ -4,9 +4,22 @@
   переключая тему
 */
 
+:root.theme-dark {
+  /* Дублируем переменные для тёмной темы */
+  --accent-color: #db00ff;
+  --accent-background-color: #ff0070;
+  --text-color: #000028;
+  --accent-border: #f1b2ce;
+  --main-padding: 10px;
+}
+
+/* Остальные стили */
+
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background: fixed border-box transparent url(../images/cover-image-dark.png)
+    no-repeat center / cover;
 }
