@@ -24,7 +24,8 @@ div,
 header,
 main,
 footer,
-section {
+section,
+a {
   margin: 0;
 }
 
