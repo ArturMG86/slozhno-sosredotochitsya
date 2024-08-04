@@ -53,7 +53,7 @@
   .theme_light .header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 299px 244px 205px;
-    max-height: 748px;
+    /* max-height: 748px; */
   }
 
   .theme_light .header__theme-menu {
@@ -82,9 +82,9 @@
     );
   }
 
-  .theme_light .footer {
+  /* .theme_light .footer {
     min-height: 748px;
-  }
+  } */
 }
 
 .theme_light .title-decor {
